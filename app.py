@@ -1,4 +1,5 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
+from forms import RegistrationForm
 
 app = Flask(__name__)
 
@@ -10,9 +11,13 @@ def index():
 def login():
     return redirect(url_for('index'))
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return 'This is the signup page'
+    form = RegistrationForm()
+    if request.method == 'POST' and form.validate():
+        user = User(form.username.data, form.email.data, form.password.data)
+        return redirect(url_for('login'))
+    return render_template('signup.html', form=form)
 
 @app.route('/about')
 def about():

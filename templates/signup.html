@@ -1,0 +1,13 @@
+<h1>This is the signup page<h1>
+  <div>
+    {%from '_formhelpers.html' import render_field%}
+    <form method=post>
+      <d1>
+        {{ render_field(form.username) }}
+        {{ render_field(form.email) }}
+        {{ render_field(form.password) }}
+        {{ render_field(form.confirm) }}
+      </d1>
+      <input type=submit value=Register>
+      </form>
+  </div>
