@@ -1,61 +1,5 @@
-<!DOCTYPE html>
-<head>
-<link href="https://fonts.googleapis.com/css?family=Lobster|Lora|Roboto+Condensed:300,400,400i,700|Ubuntu+Mono" rel="stylesheet">
 
-<style>
-body, html{
-  height: 100%;
-}
-.fullpage{
-  background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/chukchi_oli_2018169_lrg_0.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding:10px;
-  height:100%;
-}
-body {
-  border: 0;
-  margin:0;
-  padding:0;
-}
-.signupform {
-padding-top:30px;
-text-align: center;
-max-width:600px;
-background-color: #BFBEAC;
-border-radius:20px;
-margin:auto;
-color: #212C3D;
-font-family: 'Roboto Condensed', sans-serif;
-font-size: 30px;
-}
-input[type=text], input[type=password]{
-  padding:12px;
-  background-color: #BFBEAC;
-  border: none;
-  border-bottom: 2px solid #12324F;
-  color:#9C6204;
-  width: 85%;
-  outline:none;
-  font-family: 'Roboto Condensed', sans-serif;
-  size: 30px;
-}
-input[type=submit]{
-  background-color: #9C6204;
-  border: none;
-  font-family: 'Lobster', cursive;
-  font-size: 30px;
-  color: #212C3D;
-  border-radius:20px;
-  padding: 15px 30px;
-  width: 100%;
-  }
-
-</style>
-</head>
-<div class=fullpage>
-  <div class=signupform>
+  <div>
     {%from '_formhelpers.html' import render_field%}
     <form method=post>
       <d1>
@@ -67,4 +11,3 @@ input[type=submit]{
       <input type=submit value=Register>
       </form>
   </div>
-</div>
